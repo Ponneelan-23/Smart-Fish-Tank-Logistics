@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fish Tank Logistics</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background-blur"></div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- ===================================== -->
+        <!-- Hero Section -->
+        <!-- ===================================== -->
+
+        <section class="hero-card glass">
+
+            <div class="hero-content">
+
+                <h1>Fish Tank Logistics</h1>
+
+                <p>
+                    Smart Water Quality Monitoring
+                </p>
+
+                <div class="status-container">
+
+                    <span>Status</span>
+
+                    <div id="tankStatus" class="status healthy">
+                        Healthy
+                    </div>
+
+                </div>
+
+                <div class="last-update">
+
+                    Last Updated:
+                    <span id="timestamp">
+                        --
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- Sensor Cards -->
+        <!-- ===================================== -->
+
+        <section class="sensor-grid">
+
+            <!-- Temperature -->
+
+            <div class="glass sensor-card">
+
+                <h3>Temperature</h3>
+
+                <div id="temperatureValue"
+                     class="sensor-value">
+
+                    -- °C
+
+                </div>
+
+            </div>
+
+            <!-- Turbidity -->
+
+            <div class="glass sensor-card">
+
+                <h3>Turbidity</h3>
+
+                <div id="turbidityValue"
+                     class="sensor-value">
+
+                    -- NTU
+
+                </div>
+
+            </div>
+
+            <!-- pH -->
+
+            <div class="glass sensor-card">
+
+                <h3>pH</h3>
+
+                <div id="phValue"
+                     class="sensor-value">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <!-- DO -->
+
+            <div class="glass sensor-card">
+
+                <h3>Dissolved Oxygen</h3>
+
+                <div id="doValue"
+                     class="sensor-value">
+
+                    --
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- Water Level Widget -->
+        <!-- ===================================== -->
+
+        <section class="water-section glass">
+
+            <div class="water-info">
+
+                <h2>Water Level</h2>
+
+                <div id="waterLevelPercent"
+                     class="water-percent">
+
+                    0%
+
+                </div>
+
+            </div>
+
+            <div class="tank-container">
+
+                <div class="tank">
+
+                    <div id="waterFill"
+                         class="water-fill">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- Charts -->
+        <!-- ===================================== -->
+
+        <section class="chart-grid">
+
+            <!-- Temperature -->
+
+            <div class="glass chart-card">
+
+                <h3>Temperature History</h3>
+
+                <canvas id="temperatureChart"></canvas>
+
+            </div>
+
+            <!-- Turbidity -->
+
+            <div class="glass chart-card">
+
+                <h3>Turbidity History</h3>
+
+                <canvas id="turbidityChart"></canvas>
+
+            </div>
+
+            <!-- Water Level -->
+
+            <div class="glass chart-card">
+
+                <h3>Water Level History</h3>
+
+                <canvas id="waterLevelChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
